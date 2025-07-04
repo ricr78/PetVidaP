@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Central.master.cs" Inherits="ProyectoPetVida.Central" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        <asp:ContentPlaceHolder ID="titulo" runat="server"></asp:ContentPlaceHolder>
+
+    </title>
+    
+    <link href="css/estilos_home.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="text">PetVida Care</div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="nav-item">
+                <a href="<%=ResolveUrl("~/Home/index.aspx") %>">Inicio</a>
+            </li>
+           
+            
+            <li class="nav-item">
+                <a href="<%=ResolveUrl("~/Home/AcercaDe.aspx") %>">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a href="<%=ResolveUrl("~/Login/InicioSesion.aspx") %>">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+                <a href="<%=ResolveUrl("~/Login/Registrar.aspx") %>">Registrarse</a>
+            </li>
+
+        </ul>
+    </nav>
+    <br><br>
+    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="ProyectoPetVida.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="titulo1" runat="server">Bienvenido usuario</asp:ContentPlaceHolder>
+    </title>
+
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href="css/estiloMascota.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/nav.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="container">
+            &nbsp;&nbsp;&nbsp;<div class="text">PetVida Care</div>
+        </div>
+    </header>
+    <nav>
+
+        <ul>
+            <li class="nav-item">
+                <a href="InicioUSer.aspx">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="SocilitarCita.aspx">Solicitar Cita</a>
+            </li>
+            <li class="nav-item">
+                <a href="RegistrarMascota.aspx">Registrar Mascota</a>
+            </li>
+            <li class="nav-item">
+                <a href="VerCita.aspx">Citas Programadas</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<%=ResolveUrl("~/Home/Logout.aspx") %>">Cerrar Sesión</a>
+            </li>
+            <li class="nav-item">
+                <a href="EliminarCuenta.aspx">Eliminar cuenta</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>

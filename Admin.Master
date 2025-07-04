@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ProyectoPetVida.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder runat="server" ID="titulo2"></asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="~/css/style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>PetVida</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="InicioAdmin.aspx"><i class="icon"></i>Solicitud de Citas</a></li>
+            <li><a href="VerMascotasRegistradas.aspx"><i class="icon"></i> Registros de mascota </a></li>
+            <li><a href="EnviarCita.aspx"><i class="icon"></i>Enviar Cita </a></li>
+            <li><a href="VerUsuariosRegistrados.aspx"><i class="icon"></i>Usuarios Registrados</a></li>
+            <li><a href="EnviarFact.aspx"><i class="icon"></i>Enviar Factura</a></li>
+            <li><a href="<%=ResolveUrl("~/Home/Logout.aspx") %>"><i class="icon"></i>Cerrar Sesión</a></li>
+        </ul>
+        <div class="socials">
+            <a href="#" class="social-link"></a>
+            <a href="#" class="social-link"></a>
+            <a href="#" class="social-link"></a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Bienvenido Administrador</h1>
+        
+    </div>
+    <br />
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+        
+</body>
+</html>
